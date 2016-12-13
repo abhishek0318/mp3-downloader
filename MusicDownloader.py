@@ -32,7 +32,7 @@ def download_mp3_file(VideoURL):
 		print("Error downloading mp3 file!")
 		sys.exit()
 	DownloadLink = Text.parent.parent.get('href')
-	FileName = ' '.join(KeepVidSoup.h3.string.split()[:6]) + ".mp3"
+	FileName = ' '.join(KeepVidSoup.h3.string.split()[:6]) + ".m4a"
 	print("Downloading {FN}..".format(FN = FileName))
 	try:
 		wget.download(DownloadLink, FileName)
