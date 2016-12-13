@@ -19,9 +19,9 @@ def fetch_first_result(Query):
 	VideoURL = 'https://www.youtube.com' + VideoURL
 	return VideoURL
 
-def download_mp3_file(VideoURL):
+def download_music_file(VideoURL):
 	"""
-	Downloads mp3 file from a YouTube Video URL
+	Downloads m4a file from a YouTube Video URL
 	"""
 	KeepVidURL = "http://keepvid.com/?url=" + VideoURL
 	KeepVidHTML = requests.get(KeepVidURL).text
@@ -29,7 +29,7 @@ def download_mp3_file(VideoURL):
 	try:
 		Text = KeepVidSoup.find(text = " M4A - 128 kbps ")
 	except AttributeError:
-		print("Error downloading mp3 file!")
+		print("Error downloading music file!")
 		sys.exit()
 	DownloadLink = Text.parent.parent.get('href')
 	FileName = ' '.join(KeepVidSoup.h3.string.split()[:6]) + ".m4a"
@@ -50,4 +50,4 @@ try:
 except KeyboardInterrupt:
 	print("\nProgram Stopped!")
 	sys.exit()
-download_mp3_file(fetch_first_result(Query))
+download_music_file(fetch_first_result(Query))
