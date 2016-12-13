@@ -1,6 +1,6 @@
-# MP3 Downloader
+# Music Downloader
 
-This program written in python 3.5 takes in name of song and downloads it. This is done by first fetching the URL of first corresponding YouTube result and then using the URL to download the mp3 file with help [KeepVid.com]("https://keepvid.com"). 
+This program written in python 3.5 takes in name of song and downloads it. This is done by first fetching the URL of first corresponding YouTube result and then using the URL to download the m4a file with help [KeepVid.com]("https://keepvid.com"). 
 
 ## Getting Started
 
@@ -29,7 +29,7 @@ pip install wget
     Enter the name of song :
     ```
 
-* Enter the name of the song and the mp3 file will be downloaded to the same directory.
+* Enter the name of the song and the m4a file will be downloaded to the same directory.
 
 #### Linux
 * To run the program open the terminal and navigate to the folder the python file is in.
@@ -45,7 +45,7 @@ pip install wget
     Enter the name of song :
     ```
 
-* Enter the name of the song and the mp3 file will be downloaded to the same directory.
+* Enter the name of the song and the m4a file will be downloaded to the same directory.
 
 
 ## Built With
@@ -63,5 +63,5 @@ You are free to contribute to this project.
 
 * **Abhishek Sharma** - *Initial work*
 
-See also the list of [contributors](https://github.com/abhishek0318/mp3-downloader/graphs/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/abhishek0318/music-downloader/graphs/contributors) who participated in this project.
 
