@@ -12,7 +12,7 @@ def fetch_first_result(Query):
 	SearchResultHTML = requests.get(SearchResultURL).text
 	SearchResultSoup = BeautifulSoup(SearchResultHTML, 'html.parser')
 	try:
-		VideoURL = SearchResultSoup.find('a', class_='yt-uix-sessionlink yt-uix-tile-link yt-ui-ellipsis yt-ui-ellipsis-2       spf-link ').get('href')
+		VideoURL = SearchResultSoup.find('a', rel="spf-prefetch").get('href')
 	except AttributeError:
 		print("Couldn't find song!")
 		sys.exit()
